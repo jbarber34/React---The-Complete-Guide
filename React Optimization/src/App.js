@@ -12,7 +12,6 @@ function App() {
   return (
     <div className='app'>
       <h1>Hi there!</h1>
-      {showParagraph && <p>This is new!</p>}
       <Button onClick={toggleParagraphHandler}>Show Paragraph!</Button>
     </div>
   );
