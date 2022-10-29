@@ -30,7 +30,7 @@ function App() {
     <div className='app'>
       <h1>Hi there!</h1>
       <DemoOutput show={showParagraph} />
-      <DemoList title={listTitle} items={[5, 3, 1, 10, 9]} />
+      <DemoList title={listTitle} items={[6, 4, 2, 10, 8]} />
       <Button onClick={allowToggleHandler}>Allow Toggling</Button>
       <Button onClick={toggleParagraphHandler}>Show Paragraph!</Button>
       <Button onClick={changeTitleHandler}>Change List Title</Button>
