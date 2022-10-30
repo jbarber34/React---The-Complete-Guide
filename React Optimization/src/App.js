@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import Button from './components/UI/Button/Button';
 
 import './App.css';
@@ -26,11 +26,13 @@ function App() {
     setListTitle('New Title');
   }, []);
 
+  const listItems = useMemo(() => [6, 4, 2, 10, 8], []);
+
   return (
     <div className='app'>
       <h1>Hi there!</h1>
       <DemoOutput show={showParagraph} />
-      <DemoList title={listTitle} items={[6, 4, 2, 10, 8]} />
+      <DemoList title={listTitle} items={listItems} />
       <Button onClick={allowToggleHandler}>Allow Toggling</Button>
       <Button onClick={toggleParagraphHandler}>Show Paragraph!</Button>
       <Button onClick={changeTitleHandler}>Change List Title</Button>
